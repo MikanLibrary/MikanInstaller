@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース">
+      <UniqueIdentifier>{bb4c11ef-bb2f-461d-9af2-223b84088adf}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー">
+      <UniqueIdentifier>{76d30508-2ec8-437d-ad18-056c0875d52f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース">
+      <UniqueIdentifier>{30065eeb-251a-4dfe-9507-d4c882c56669}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Unzip">
+      <UniqueIdentifier>{166e0526-d896-402f-9f69-61c87f4eaa73}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MikanInstaller.cpp">
+      <Filter>ソース</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectoryOperations.cpp">
+      <Filter>ソース</Filter>
+    </ClCompile>
+    <ClCompile Include="Form.cpp">
+      <Filter>ソース</Filter>
+    </ClCompile>
+    <ClCompile Include="Unzip\ioapi.c">
+      <Filter>Unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="Unzip\unzip.c">
+      <Filter>Unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="Unzip\UnzipClass.cpp">
+      <Filter>Unzip</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>リソース</Filter>
+    </Image>
+    <Image Include="icon_16.ico">
+      <Filter>リソース</Filter>
+    </Image>
+    <Image Include="icon_32.ico">
+      <Filter>リソース</Filter>
+    </Image>
+    <Image Include="icon_48.ico">
+      <Filter>リソース</Filter>
+    </Image>
+    <Image Include="icon_64.ico">
+      <Filter>リソース</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>リソース</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>ヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectoryOperations.h">
+      <Filter>ヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="MikanInstaller.h">
+      <Filter>ヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>ヘッダー</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\crypt.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\ioapi.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\unzip.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\UnzipClass.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\zconf.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="Unzip\zlib.h">
+      <Filter>Unzip</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
