@@ -11,6 +11,8 @@
 #include "resource.h"
 
 //å„Ç≈í≤Ç◊ÇƒèëÇ´íºÇπÇÈÇÊÇ§Ç…Ç∑ÇÈÅB
+#define INSTALL_PATH "C:\\lib\\Mikan2017"
+
 int INSTALL_VERSION = 0;
 
 struct SYSTEM sys = { -1, 0, {},{ 0, 1 }, 0, {}, 0 };
@@ -40,7 +42,7 @@ char PageTitle[ PageMax ][ 50 ] =
 
 char InstallPath[ 2 ][ 259 ] =
 {
-  "C:\\lib\\Mikan2015"
+	INSTALL_PATH
 };
 
 char WIZARDDIR[ 259 ];
@@ -50,19 +52,17 @@ class CLASSDIRECTORY *dir = NULL;
 
 int InstallVerSet( int ver )
 {
+	size[ 1 ] = 1024;
+	VSCOMNTOOLS = (char *)calloc(size[1], sizeof(char));
 	switch ( ver )
 	{
 	case 2008:
 		INSTALL_VERSION = 2008;
-		size[ 1 ] = 1024;
-		VSCOMNTOOLS = (char *)calloc( size[ 1 ], sizeof( char ) );
 		_dupenv_s( &VSCOMNTOOLS, &( size[ 1 ] ), "VS100COMNTOOLS" );
 		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2008\\Wizards\"" );
 		break;
 	case 2010:
 		INSTALL_VERSION = 2010;
-		size[ 1 ] = 1024;
-		VSCOMNTOOLS = (char *)calloc( size[ 1 ], sizeof( char ) );
 		_dupenv_s( &VSCOMNTOOLS, &( size[ 1 ] ), "VS100COMNTOOLS" );
 		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2010\\Wizards\"" );
 		break;
@@ -72,25 +72,23 @@ int InstallVerSet( int ver )
 		break;*/
 	case 2012:
 		INSTALL_VERSION = 2012;
-		size[ 1 ] = 1024;
-		VSCOMNTOOLS = (char *)calloc( size[ 1 ], sizeof( char ) );
 		_dupenv_s( &VSCOMNTOOLS, &( size[ 1 ] ), "VS110COMNTOOLS" );
 		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2012\\Wizards\"" );
 		break;
 	case 2013:
 		INSTALL_VERSION = 2013;
-		size[ 1 ] = 1024;
-		VSCOMNTOOLS = (char *)calloc( size[ 1 ], sizeof( char ) );
 		_dupenv_s( &VSCOMNTOOLS, &( size[ 1 ] ), "VS120COMNTOOLS" );
 		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2013\\Wizards\"" );
 		break;
 	case 2015:
-	default:
 		INSTALL_VERSION = 2015;
-		size[ 1 ] = 1024;
-		VSCOMNTOOLS = (char *)calloc( size[ 1 ], sizeof( char ) );
+		_dupenv_s(&VSCOMNTOOLS, &( size[ 1 ] ), "VS140COMNTOOLS");
+		strcpy_s(WIZARDDIR, 259, "\\Documents\\Visual Studio 2015\\Wizards\"");
+	case 2017:
+	default:
+		INSTALL_VERSION = 2017;
 		_dupenv_s( &VSCOMNTOOLS, &( size[ 1 ] ), "VS140COMNTOOLS" );
-		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2015\\Wizards\"" );
+		strcpy_s( WIZARDDIR, 259, "\\Documents\\Visual Studio 2017\\Wizards\"" );
 		break;
 	}
 
